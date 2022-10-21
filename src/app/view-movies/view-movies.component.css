@@ -1,0 +1,37 @@
+.image
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 380px;
+    max-width: 100%;
+    object-fit: fill;
+}
+.whole
+{
+  background-color: black;
+  width: 100%;
+  height: auto;
+}
+.card
+{
+    box-shadow: 1px 1px 5px 2px #FF8210;
+    transition: all ease-in-out 350ms;
+    background-color: black;
+}
+.card:hover
+{
+    box-shadow: 1px 1px 10px 8px #FF8210;
+    transform: scale(1.04);
+    cursor: pointer;
+}
+.btn
+{
+    background-color: #FF8210;
+    border-radius: 50px;
+    transition: all 350ms;
+}
+.btn:hover
+{
+    transform: scale(1.12);
+    color: white;
+}

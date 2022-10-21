@@ -1,0 +1,14 @@
+<div class="whole">
+    <div class="container" >
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4" *ngIf="movies.length!=0">
+            <div class="col" *ngFor="let movie of movies">
+                <div class="card mb-5 text-center  mt-4" style="border: none; border-radius: 10px;">
+                    <img class="image" src={{movie.image}} alt="NOT Found">
+                    <div class="card-body">
+                        <button (click)="bookMovie(movie.id)" class="btn">Book Tickets</button>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>    
+</div>

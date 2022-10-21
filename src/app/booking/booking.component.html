@@ -1,0 +1,104 @@
+
+
+<div class="banner text-white" >
+    <div class="card-content">
+      <div class="header">
+        <img src={{movieObj.image}} alt=""> 
+        <h1>{{movieObj.name}}</h1>
+      <div class="actors  " >
+          <ul *ngFor="let actor of movieObj.cast">
+              <li> <h4>{{actor}}</h4> </li>
+          </ul>
+      </div>
+      <span class="tickets">{{movieObj.tickets_avlble}}</span> 
+      <span class="count">Tickets left!</span>
+      </div>
+      <div class="content">
+        {{movieObj.description}}
+      </div>
+      <div class="footer">
+          <ul>
+            <li> <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button> </li>
+            <li>
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+              </button>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="background" [ngStyle]="{'background-image': 'url(' + movieObj.image + ')'}">
+    </div>
+</div>
+
+<div class="cc">
+  <!-- Form -->
+<div class="container">
+  <div class="card card-form  text-white">
+      <div class="row">
+          <div class="col-5">
+              <img src="https://www.technomusk.com/wp-content/uploads/2018/06/iStock_19377019_res.jpg"  />
+          </div>
+          <div class="col-7">
+              <h5 class="text-center mb-4">Book Your Tickets</h5>
+              <form  autocomplete="off" [formGroup]="bookingForm" (ngSubmit)="confirmNow()">
+                  <div class=" mb-3">
+                    <label for="username">Enter Username</label>
+                      <div>
+                        <input type="name" id="username" formControlName="username">
+                      </div>
+                      <div class="err" *ngIf="username && username.invalid && username.touched">
+                        Username must have atleast 6 charachters
+                      </div>
+                      <div class="err" *ngIf="username && username.valid && username.touched && getUsernameValidStatus()===false" >
+                        Username already taken!
+                      </div>
+                    </div>
+                    <div class=" mb-3" >
+                      <label for="tickets_booked">Enter number of tickets</label>
+                      <div>
+                        <input type="number" id="tickets_booked"  formControlName="tickets_booked">
+                      </div>
+                      <div class="err" *ngIf="tickets_booked && tickets_booked.invalid && tickets_booked.touched" >
+                        Please enter valid number of tickets
+                      </div>
+                      <span class="err" *ngIf="tickets_booked && tickets_booked.valid && tickets_booked.touched && getTicketValidStatus()===false">
+                       Sorry!, only {{movieObj.tickets_avlble}} tickets are left
+                      </span>
+                    </div>
+                    <div class="row two">
+                      <div class="col-6">
+                        <div class="show_times">
+                          <div>Show Time</div>
+                          <div class="selectC">
+                            <select class="form-select form-select-sm" formControlName="show_time" aria-label=".form-select-sm example">
+                              <option value="1">Morning Show</option>
+                              <option value="2">First Show</option>
+                              <option value="3">Night Show</option>
+                            </select>
+                          </div>
+                          <div class="err1" *ngIf="show_time && show_time.invalid && show_time.touched">
+                              select show time!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="show_dates">
+                          <div>Show Date</div>
+                          <input type="date" id="show_date" formControlName="show_date">
+                          <div class="err1" *ngIf="show_date && show_date.invalid && show_date.touched" >
+                            select show date!
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-class" [disabled]="bookingForm.invalid" (click)="confirmNow()" >Confirm Now</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>

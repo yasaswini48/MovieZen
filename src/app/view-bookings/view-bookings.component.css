@@ -1,0 +1,50 @@
+tr,td,th
+{
+  text-align: center;
+}
+th
+{
+  color:#FF8210 ;
+}
+.mat-icon
+{
+  color: #FF8210;
+  transition: all ease 350ms;
+}
+.mat-icon:hover
+{
+  transform: scale(1.12);
+  color: white;
+}
+input
+{
+  width: 100%;
+}
+.cc
+{
+  padding-top: 20px;
+  height: 1000px;
+  background-color: black;
+}
+.table
+{
+  background-color: black;
+  color: white;
+}
+th
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+p
+{
+  color: #FF8210;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+tr
+{
+  font-size: 15px;
+}

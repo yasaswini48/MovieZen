@@ -1,0 +1,39 @@
+#ourHead
+{
+    font-size: 40px;
+    margin-top:10px ;
+    margin-bottom: 20px;
+    color: #FF8210;
+}
+#ourPara
+{
+    font-size: 20px;
+    line-height: 40px;
+}
+.par
+{
+    background-color: black;
+    color: white;
+    height: 600px;
+    padding: 30px;
+}
+.carousel
+{
+    background-color: black;  
+}
+.carousel img
+{
+    height: 300px;
+}
+.img1
+{
+   max-width: 100%;
+   transform: translateY(100px);
+   clip-path: circle(40%);
+   transition: all 1s;
+   box-shadow: black;
+}
+.img1:hover
+{
+ clip-path: circle(75%);
+}

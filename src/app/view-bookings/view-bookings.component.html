@@ -1,0 +1,78 @@
+<!-- All users details -->
+<div class="cc">
+  <div class="container">
+    <div *ngIf="users.length==0">
+       No users!
+    </div>
+     <div *ngIf="users.length!=0">
+      <p >User's Booking Details</p>
+     <form #ref="ngForm" (ngSubmit)="onConfirm(ref.value)">
+       <table class="table table-sm">
+         <thead>
+           <tr>
+             <th scope="col">Id</th>
+             <th scope="col">Username</th>
+             <th scope="col">Movie</th>
+             <th scope="col">Tickets Booked</th>
+             <th scope="col">Show Date</th>
+             <th scope="col">Show Time</th>
+             <th scope="col">Action</th>  
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let user of users;let ind=index">
+              <td> {{user.id}}</td>
+              <td>
+               {{user.username}}
+             </td>
+              <td>
+               {{user.moviename}}
+              </td>
+              <td>
+               <span *ngIf="editUserIndex!=ind || editUserStatus==false">{{user.tickets_booked}} </span>
+               <div style="color: red;" *ngIf="getTicketValidStatus()===false && editUserIndex==ind && editUserStatus==true">Cant' Book! </div>
+               <span> <input name="tickets_booked" [(ngModel)]="editUserObj.tickets_booked" value="{{editUserObj.tickets_booked}}" *ngIf="editUserIndex==ind && editUserStatus==true" type="number"></span>
+               <!-- <span> <input name="tickets_booked"  *ngIf="editUserIndex==ind && editUserStatus==true" type="number" FormControlName="tickets_booked" value="{{editUserObj.tickets_booked}}"></span>  -->
+             </td>
+              <td> 
+               <span *ngIf="editUserIndex!=ind || editUserStatus==false">{{user.show_date | date}} </span>
+               <span> <input name="show_date" [(ngModel)]="editUserObj.show_date" value="{{editUserObj.show_date}}" *ngIf="editUserIndex==ind && editUserStatus==true" type="date"></span>
+               <!-- <span> <input name="show_date" FormControlName="show_date" value="{{editUserObj.show_date}}" *ngIf="editUserIndex==ind && editUserStatus==true" type="date"></span>  -->
+             </td>
+              <td> 
+               <span *ngIf="editUserIndex!=ind || editUserStatus==false"> {{user.show_time}} </span>
+               <span>
+                 <select [(ngModel)]="editUserShowTime" *ngIf="editUserIndex==ind && editUserStatus==true" name="editUserShowTime">
+                     <option *ngFor="let show of show_times" [value]="show">
+                        {{show}}
+                     </option>
+                 </select>
+               </span>
+             </td>
+              <td> 
+               <span *ngIf="editUserIndex!=ind || editUserStatus==false">
+                 <button mat-icon-button (click)="onEdit(user,ind)">
+                   <mat-icon>edit</mat-icon>
+               </button>
+               <button mat-icon-button color="warn" (click)="onDelete(user.id,ind)">
+                   <mat-icon>delete</mat-icon>
+               </button> 
+               </span> 
+               <span *ngIf="editUserIndex==ind && editUserStatus==true">
+                 <button [disabled]="getTicketValidStatus()==false" mat-icon-button color="warn"  type="submit">
+                   <mat-icon>check</mat-icon>
+                 </button>
+                 <button mat-icon-button color="warn">
+                   <mat-icon>cancel</mat-icon>
+                 </button>
+               </span>
+             </td>
+           </tr> 
+           
+         </tbody>
+       </table>
+
+     </form>
+     </div>
+</div>
+</div>

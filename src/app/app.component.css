@@ -1,0 +1,57 @@
+.navbar
+{
+  background-color:black;
+  height: 60px;
+}
+a
+{
+  color:  #FF8210;
+}
+.navbar-brand
+{
+  font-size: 30px;
+    position: relative;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+.navbar-brand:hover,.nav-link:hover
+{
+  color: white;
+  transition: all ease 350ms;
+  transform: scale(1.05);
+}
+.nav-link
+{
+    letter-spacing: 0.5px;
+    position: relative;
+    font-size: 20px;
+}
+.nav-link::after
+{
+    content: '';
+    position:absolute;
+    display: block;
+    height: 5px;
+    width:0%;
+    background-color: #FF8210;
+    border: none;
+    border-radius: 50px;
+    transition: all ease-in-out 350ms;
+}
+.nav-link:hover::after
+{
+    width:82%;
+}
+a:active
+{
+  color: white;
+}
+.active 
+{
+   background-color: #FF8210;
+   color: white; 
+}
+.active::after
+{
+  width: 82%;
+}

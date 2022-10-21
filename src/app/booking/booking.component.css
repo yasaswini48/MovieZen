@@ -1,0 +1,272 @@
+
+.card
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    width: 1000px;
+    height: 350px;
+    margin: auto; 
+    border-radius: 10px;
+    transition: all 0.4s;
+    color: white;
+    background-color: black;
+}
+
+.selectC 
+{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+}
+ul
+{
+    list-style: none;
+}
+
+img
+{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.dropdowns
+{
+    display: flex;
+    justify-content:space-between;
+}
+.card-form
+{
+    height: 400px;
+}
+input
+{
+    border:none;
+    width: 430px;
+    height: 32px;
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+}
+label
+{
+    margin-left: 80px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+select
+{
+  border-radius: 50px;
+}
+.show_times select
+{
+  margin-top: 7px;
+  width: 150px;
+}
+.show_dates 
+{
+  margin-left: 20px;
+  border-radius: 50px;
+}
+.show_dates input
+{
+  margin-left: 0px;
+  margin-top: 7px;
+  width:  150px;
+}
+.banner
+{
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.card-content
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,black 60%,transparent 100%);
+  z-index: 2;
+}
+.header
+{
+  position: relative;
+  padding: 25px;
+  height: 40%;
+  width: 65%;
+}
+.header h1
+{
+  font-size: 35px;
+  font-weight: bold; 
+  font-family: 'IBM Plex Mono', monospace;
+font-family: 'Merriweather', serif;
+font-family: 'PT Serif', serif;
+}
+.cc
+{
+
+}
+.cc img
+{
+  height: 410px;
+  width: 400px;
+  object-fit: cover;
+  margin-right: 20px;
+  box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+.header img
+{
+  position: relative;
+  float:  left;
+  height: 310px;
+  width: 250px;
+  object-fit: cover;
+  margin-right: 20px;
+  box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+.header h4 h1 
+{
+  font-weight: 400;
+}
+.header .tickets
+{
+  display: inline-block;
+  margin-top: 0px;
+  padding: 5px;
+  background-color:#FF8210;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px; 
+  margin-right: 10px;
+  font-size: 20px;
+}
+.count
+{
+  font-size: 20px;
+}
+.content
+{
+  padding: 25px;
+  height: 50%;
+  width: 60%;
+  line-height: 1.8em;
+  color: white;
+  font-size: 15px;
+  word-spacing: 2px;
+}
+.footer
+{
+  height: 10%;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+.footer ul{
+   list-style: none;
+   padding: 0;
+   margin-top: -15px;
+   margin-left: 10px;
+}
+.footer ul li
+{
+  display: inline-block;
+  color:white;
+  transition: 0.3s ease;
+}
+.example-icon
+{
+  transition: all ease 350ms;
+}
+.example-icon:hover
+{
+  transform: scale(1.2);
+  color:#FF8210 ;
+}
+.background
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  width: 80%;
+  background-size: cover;
+}
+.actors ul
+{
+  display: inline-block;
+}
+.actors li
+{
+  margin-left: -30px;
+  margin-right: 10px;
+}
+.actors li h4
+{
+  font-size: 20px;
+  color: #FF8210;
+  transition: all ease 350ms;
+}
+.actors li h4:hover
+{
+  transform: scale(1.12);
+}
+h5
+{
+  font-family: 'IBM Plex Mono', monospace;
+font-family: 'Merriweather', serif;
+font-family: 'PT Serif', serif;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #FF8210;
+}
+.cc
+{
+  background-color: black;
+  height: 500px;
+  padding-top: 50px;
+}
+.two
+{
+  margin-left: 62px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+.err
+{
+  font-weight: bold;
+  margin-left: 80px;
+  color: red;
+  margin-top: 5px;
+  word-spacing:1px;
+}
+.err1
+{
+  margin-left: 8px;
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+  word-spacing:1px;
+}
+.btn-class
+{
+  margin-left: 75px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  margin-top: 10px;
+  background-color: #FF8210;
+  border: none;
+  border-radius: 50px;
+  transition: all 350ms;
+}
+.btn-class:hover
+{
+    transform: scale(1.12);
+    color: white;
+}
